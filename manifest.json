@@ -11,17 +11,8 @@
   ],
   "background": {
     "scripts": ["background.js"],
-    "persistent": true
+    "persistent": false
   },
   "commands": {},
-  "page_action": {},
-  "content_scripts": [
-    {
-      "matches": [
-        "*://github.com/*/*",
-        "*://gitlab.com/*/*"
-      ],
-      "js": ["empty.js"]
-    }
-  ]
+  "page_action": {}
 }
