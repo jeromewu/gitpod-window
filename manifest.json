@@ -7,5 +7,6 @@
   "background": {
     "scripts": ["background.js"],
     "persistent": true
-  }
+  },
+  "commands": {}
 }
