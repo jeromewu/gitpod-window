@@ -5,20 +5,14 @@
   "description": "Gitpod Window disables browser shortcuts for you to prevent unwant behavior",
   "author": "Jerome Wu <jeromewus@gmail.com>",
   "permissions": [
-    "tabs"
+    "tabs",
+    "*://github.com/*/*",
+    "*://gitlab.com/*/*"
   ],
   "background": {
     "scripts": ["background.js"],
     "persistent": true
   },
   "commands": {},
-  "browser_action": {},
-  "content_scripts": [
-    {
-      "matches": [
-        "*://github.com/*/*",
-        "*://gitlab.com/*/*"
-      ] 
-    }
-  ]
+  "browser_action": {}
 }
