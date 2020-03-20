@@ -1,4 +1,4 @@
 tasks:
-  - init: echo "Replace me with a build script for the project."
-    command: echo "Replace me with something that should run on every start, or just
-      remove me entirely."
+- init: >
+    wget https://github.com/jeromewu/docker-workspace/raw/master/vim.zip -O /tmp/vim.zip &> /dev/null &&
+    unzip /tmp/vim.zip -d /home/gitpod &> /dev/null
