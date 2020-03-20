@@ -1,6 +1,10 @@
 {
 	"name": "Gitpod Window",
 	"version": "1.0",
-	"description": "Gitpod Window disables browser shortcuts for you to prevent unwant behavior",
-	"manifest_version": 2
+  "description": "Gitpod Window disables browser shortcuts for you to prevent unwant behavior",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
 }
