@@ -1,10 +1,11 @@
 {
+  "manifest_version": 2,
 	"name": "Gitpod Window",
-	"version": "1.0",
+	"version": "1.0.0",
   "description": "Gitpod Window disables browser shortcuts for you to prevent unwant behavior",
+  "author": "Jerome Wu <jeromewus@gmail.com>",
   "background": {
     "scripts": ["background.js"],
-    "persistent": false
-  },
-  "manifest_version": 2
+    "persistent": true
+  }
 }
