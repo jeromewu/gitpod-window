@@ -11,14 +11,10 @@
  */
 
 const forcePopup = ({ id, url }) => {
-  if (/https?:\/\/(github|gitlab).com\/*\/*/.test(url)) {
+  if (/https?:\/\/(github|gitlab).com\/.*\/.*/.test(url)) {
     chrome.pageAction.show(id);
   }
 };
-
-chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-  forcePopup(tabs[0]);
-});
 
 chrome.tabs.onUpdated.addListener((tabId, activeInfo, tab) => {
   forcePopup(tab);
@@ -28,49 +24,9 @@ chrome.tabs.onActivated.addListener(({ tabId }) => {
   chrome.tabs.get(tabId, forcePopup);
 });
 
-chrome.pageAction.onClicked.addListener((tab) => {
-  chrome.tabs.query({active: true, lastFocusedWindow: true}, (tabs) => {
-    const { url } = tabs[0];
-    chrome.windows.create({
-      url: `https://.gitpod.io/#${url}`,
-      type: 'popup',
-    });
+chrome.pageAction.onClicked.addListener(({ url }) => {
+  chrome.windows.create({
+    url: `https://.gitpod.io/#${url}`,
+    type: 'popup',
   });
-});
-
-/*
- * Shortcut disabling
- *
- * @ref: https://developer.chrome.com/extensions/commands
- */
-
-const handleCommand = (command) => {
-  /*
-   * Do nothing.
-   */
-};
-
-const toggleCommandListener = ({ id, url }) => {
-  if (/https?:\/\/*.*.gitpod.io\/*/.test(url)) {
-    chrome.commands.onCommand.addListener(handleCommand);
-    return;
-  /*
-   * Check and remove listener when user are not in a
-   * gitpod workspace
-   */
-  } else if (chrome.commands.onCommand.hasListener(handleCommand)) {
-    chrome.commands.onCommand.removeListener(handleCommand);
-  }
-};
-
-chrome.tabs.onUpdated.addListener((tabId, activeInfo, tab) => {
-  toggleCommandListener(tab);
-});
-
-chrome.tabs.onActivated.addListener(({ tabId }) => {
-  chrome.tabs.get(tabId, toggleCommandListener);
-});
-
-chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-  toggleCommandListener(tabs[0]);
 });
