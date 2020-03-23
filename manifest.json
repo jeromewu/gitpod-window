@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Gitpod Window",
-  "version": "1.0.0",
-  "description": "Gitpod Window disables browser shortcuts for you to prevent unwant behavior",
+  "version": "1.0.1",
+  "description": "Gitpod Window offers you a immersive IDE experience with minimal UI and shortcuts",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

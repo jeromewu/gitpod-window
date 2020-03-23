@@ -1,4 +1,14 @@
+# Gitpod Window
+
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/jeromewu/gitpod-window) 
 
-# gitpod-window
-Gitpod Window to disable browser shortcuts (ex. ctrl+w)
+![](./images/gitpod-window-screenshot.png)
+
+Gitpod Window offers you an immersive IDE experience with minimal UI and shortcuts.
+
+>> This is NOT an official extension from Gitpod
+
+The goal of this extension is to provide a improved Gitpod online IDE experience. What is does is opening a Chrome popup window with:
+
+- Minimal Chrome Interface (see screenshot)
+- Full Keyboard Shortcuts (incl. Ctrl-W, Ctrl-N, Ctrl-T and more)
