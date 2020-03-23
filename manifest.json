@@ -5,6 +5,7 @@
   "description": "Gitpod Window disables browser shortcuts for you to prevent unwant behavior",
   "author": "Jerome Wu <jeromewus@gmail.com>",
   "permissions": [
+    "activeTab",
     "tabs",
     "*://github.com/*/*",
     "*://gitlab.com/*/*"
@@ -13,6 +14,13 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "commands": {},
+  "commands": {
+    "Ctrl+W": {
+      "description": "Disable Ctrl+W",
+      "suggested_key": {
+        "default": "Ctrl+W"
+      }
+    }
+  },
   "page_action": {}
 }
