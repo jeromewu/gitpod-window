@@ -1,6 +1,11 @@
 # Gitpod Window
 
+![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/jhpkbhdoenpnfnnkelgpikndadikogdl)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/users/jhpkbhdoenpnfnnkelgpikndadikogdl)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/v/jhpkbhdoenpnfnnkelgpikndadikogdl)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/jeromewu/gitpod-window) 
+
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/gitpod-window/jhpkbhdoenpnfnnkelgpikndadikogdl)
 
 Gitpod Window offers you an immersive IDE experience with minimal UI and shortcuts.
 
