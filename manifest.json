@@ -14,13 +14,6 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "commands": {
-    "Ctrl+W": {
-      "description": "Disable Ctrl+W",
-      "suggested_key": {
-        "default": "Ctrl+W"
-      }
-    }
-  },
+  "commands": {},
   "page_action": {}
 }
