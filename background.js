@@ -16,12 +16,16 @@ const forcePopup = ({ id, url }) => {
   }
 };
 
-chrome.tabs.onSelectionChanged.addListener((tabId) => {
-  chrome.tabs.get(tabId, forcePopup);
-});
-
 chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
   forcePopup(tabs[0]);
+});
+
+chrome.tabs.onUpdated.addListener((tabId, activeInfo, tab) => {
+  forcePopup(tab);
+});
+
+chrome.tabs.onActivated.addListener(({ tabId }) => {
+  chrome.tabs.get(tabId, forcePopup);
 });
 
 chrome.pageAction.onClicked.addListener((tab) => {
@@ -35,7 +39,7 @@ chrome.pageAction.onClicked.addListener((tab) => {
 });
 
 /*
- * Shortcut handling
+ * Shortcut disabling
  *
  * @ref: https://developer.chrome.com/extensions/commands
  */
@@ -59,7 +63,11 @@ const toggleCommandListener = ({ id, url }) => {
   }
 };
 
-chrome.tabs.onSelectionChanged.addListener((tabId) => {
+chrome.tabs.onUpdated.addListener((tabId, activeInfo, tab) => {
+  toggleCommandListener(tab);
+});
+
+chrome.tabs.onActivated.addListener(({ tabId }) => {
   chrome.tabs.get(tabId, toggleCommandListener);
 });
 
