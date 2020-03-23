@@ -2,9 +2,9 @@
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/jeromewu/gitpod-window) 
 
-![](./images/gitpod-window-screenshot.png)
-
 Gitpod Window offers you an immersive IDE experience with minimal UI and shortcuts.
+
+![](./images/gitpod-window-screenshot.png)
 
 \* This is NOT an official extension from Gitpod
 
