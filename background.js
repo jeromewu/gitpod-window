@@ -26,9 +26,9 @@ chrome.tabs.onActivated.addListener(({ tabId }) => {
 });
 
 chrome.pageAction.onClicked.addListener(({ url }) => {
-  let url = `https://gitpod.io/#${url}`;
+  let popupUrl = `https://gitpod.io/#${url}`;
   if(/https:\/\/gitpod.io\/workspaces\/.*/.test(url)) {
-    url = 'https://gitpod.io/workspaces/';
+    popupUrl = 'https://gitpod.io/workspaces/';
   }
-  chrome.windows.create({ url, type: 'popup' });
+  chrome.windows.create({ url: popupUrl, type: 'popup' });
 });
