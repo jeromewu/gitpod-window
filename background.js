@@ -12,7 +12,7 @@
 
 const forcePopup = ({ id, url }) => {
   if (/https?:\/\/(github|gitlab).com\/.*\/.*/.test(url) ||
-      /https:\/\/gitpod.io\/workspaces\/.*/.test(url)) {
+      /https?:\/\/gitpod.io\/.*/.test(url)) {
     chrome.pageAction.show(id);
   }
 };
@@ -27,7 +27,7 @@ chrome.tabs.onActivated.addListener(({ tabId }) => {
 
 chrome.pageAction.onClicked.addListener(({ url }) => {
   let popupUrl = `https://gitpod.io/#${url}`;
-  if(/https:\/\/gitpod.io\/workspaces\/.*/.test(url)) {
+  if(/https?:\/\/gitpod.io\/.*/.test(url)) {
     popupUrl = 'https://gitpod.io/workspaces/';
   }
   chrome.windows.create({ url: popupUrl, type: 'popup' });

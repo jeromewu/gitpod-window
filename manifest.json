@@ -13,7 +13,7 @@
     "tabs",
     "*://github.com/*/*",
     "*://gitlab.com/*/*",
-    "https://gitpod.io/workspaces/"
+    "*://gitpod.io/*"
   ],
   "background": {
     "scripts": ["background.js"],
