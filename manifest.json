@@ -10,10 +10,7 @@
   },
   "author": "Jerome Wu <jeromewus@gmail.com>",
   "permissions": [
-    "tabs",
-    "*://github.com/*/*",
-    "*://gitlab.com/*/*",
-    "*://gitpod.io/*"
+    "tabs"
   ],
   "background": {
     "scripts": ["background.js"],
