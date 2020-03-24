@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Gitpod Window",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Gitpod Window offers you a immersive IDE experience with minimal UI and shortcuts",
   "icons": {
     "16": "icon16.png",
