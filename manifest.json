@@ -12,7 +12,8 @@
   "permissions": [
     "tabs",
     "*://github.com/*/*",
-    "*://gitlab.com/*/*"
+    "*://gitlab.com/*/*",
+    "https://gitpod.io/workspaces/"
   ],
   "background": {
     "scripts": ["background.js"],
