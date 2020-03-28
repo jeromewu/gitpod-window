@@ -1,4 +1,7 @@
-<img src="./icon128.png" style="display:block;margin-left:auto;margin-right:auto;width:50%;" />
+<p align="center">
+  <img src="./icon128.png" />
+</p>
+
 
 # Gitpod Window
 
