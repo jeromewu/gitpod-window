@@ -23,7 +23,7 @@ chrome.tabs.onActivated.addListener(({ tabId }) => {
 });
 
 chrome.pageAction.onClicked.addListener(({ url }) => {
-  let popupUrl = 'https://gitpod.io/workspaces/';
+  let popupUrl = 'https://gitpod.io/workspaces/?popup=true';
   if (/https?:\/\/(github|gitlab).com\/.*\/.*/.test(url)) {
     popupUrl = `https://gitpod.io/#${url}`;
   }

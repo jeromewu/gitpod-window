@@ -16,5 +16,11 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "page_action": {}
+  "page_action": {},
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://gitpod.io/workspaces/?popup=true"]
+    }
+  ]
 }

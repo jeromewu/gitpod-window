@@ -2,7 +2,6 @@
   <img src="./icon128.png" />
 </p>
 
-
 # Gitpod Window
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/jhpkbhdoenpnfnnkelgpikndadikogdl)
