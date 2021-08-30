@@ -24,7 +24,7 @@ chrome.tabs.onActivated.addListener(({ tabId }) => {
 
 chrome.pageAction.onClicked.addListener(({ url }) => {
   let popupUrl = 'https://gitpod.io/workspaces/?popup=true';
-  if (/https?:\/\/(github|gitlab).com\/.*\/.*/.test(url)) {
+  if (/https?:\/\/(github\.com|gitlab\.com|bitbucket\.org)\/.*\/.*/.test(url)) {
     popupUrl = `https://gitpod.io/#${url}`;
   }
   chrome.windows.create({ url: popupUrl, type: 'popup' });
